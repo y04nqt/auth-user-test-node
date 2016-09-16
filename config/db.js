@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 var connectionString = 'mongodb://localhost/user-auth';
+
 if (process.env.NODE_ENV === 'production') {
-    connectionString = process.env.MONGOLAB_URI;
+    connectionString = "mongodb://heroku_192mjtbt:b395togiicmvr0sbfeqqb6k387@ds033086.mlab.com:33086/heroku_192mjtbt";
     console.log(connectionString);
 }
 mongoose.connect(connectionString);
