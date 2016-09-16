@@ -14,9 +14,10 @@ mongoose.connection.on('connected', function() {
 
 mongoose.connection.on('error', function(err) {
   console.log('Oh shit, gotta get outta here. There\'s something wrong here...');
+  console.log(connectionString);
   console.log(err);
 });
 
 mongoose.connection.on('disconnected', function() {
-  console.log('Get to the choppa');
+  console.log('We\'re out of here! Into the Choppa!');
 });
